@@ -1,0 +1,6 @@
+<frozen importlib._bootstrap>:228: RuntimeWarning: Your system is neon capable but pygame was not built with support for it. The performance of some of your blits could be adversely affected
+pygame-ce 2.4.1 (SDL 2.0.14, Python 3.9.2)
+Traceback (most recent call last):
+  File "/home/pi/LightTrace/game3.py", line 29, in <module>
+    receiver_socket.connect((receiver_ip, port))
+OSError: [Errno 101] Network is unreachable

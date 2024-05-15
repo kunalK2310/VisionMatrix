@@ -1,0 +1,24 @@
+pygame 1.9.6
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Connected to this IP:  10.49.88.187
+not connecting
+not connecting
+not connecting
+not connecting
+not connecting
+Connected to color port:  10.49.88.187
+red
+Traceback (most recent call last):
+  File "/home/pi/LightTrace/game.py", line 605, in <module>
+    main_menu()
+  File "/home/pi/LightTrace/game.py", line 592, in main_menu
+    art_mode()
+  File "/home/pi/LightTrace/game.py", line 469, in art_mode
+    check_clicked(colors, is_color_button=True)
+  File "/home/pi/LightTrace/game.py", line 433, in check_clicked
+    color_socket.send(message.encode())
+NameError: name 'color_socket' is not defined
+Traceback (most recent call last):
+  File "/home/pi/LightTrace/game.py", line 50, in button_17
+    sys.ext()
+AttributeError: module 'sys' has no attribute 'ext'

@@ -1,0 +1,11 @@
+{
+  "defaults": {
+    "font": {
+      "regular_path": "/usr/share/fonts/truetype/noto/NotoSans-Regular.ttf",
+      "bold_path": "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf",
+      "italic_path": "/usr/share/fonts/truetype/noto/NotoSans-Italic.ttf",
+      "bold_italic_path": "/usr/share/fonts/truetype/noto/NotoSans-BoldItalic.ttf"
+    }
+  }
+}
+

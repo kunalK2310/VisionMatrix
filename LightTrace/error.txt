@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/pi/LightTrace/game.py", line 512, in <module>
+    main_menu()
+  File "/home/pi/LightTrace/game.py", line 503, in main_menu
+    art_mode()
+  File "/home/pi/LightTrace/game.py", line 336, in art_mode
+    BRUSH_CLICKED = Button(image=pygame.image.load("assets/buttons/art_button_clicked.png"), pos=(256,98), text_input="Brush", font=get_font(15), base_color="#d5d4d9")
+  File "/home/pi/LightTrace/buttons.py", line 10, in __init__
+    self.text = self.font.render(self.text_input, True, self.base_color)
+TypeError: Invalid foreground RGBA argument
