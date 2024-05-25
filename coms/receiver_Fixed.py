@@ -19,9 +19,11 @@ current_process = None
 def kill_current_process():
     global current_process
     if current_process is not None:
+        print(f"Killing process with PGID: {os.getpgid(current_process.pid)}")
         os.killpg(os.getpgid(current_process.pid), signal.SIGTERM)
         current_process.wait()
         current_process = None
+        print("Process killed")
 
 try:
     while True:
@@ -37,16 +39,16 @@ try:
 
         # Start new process based on the received message
         if received_message.startswith('art'):
-            current_process = subprocess.Popen("sudo -E python3 drawWithGesture.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid)
+            current_process = subprocess.Popen("sudo -E python3 /home/pi/coms/drawWithGesture.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid)
         elif received_message == "seg":
-            current_process = subprocess.Popen("sudo -E python3 imageSegmentation.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid)
+            current_process = subprocess.Popen("sudo -E python3 /home/pi/coms/imageSegmentation.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid)
         elif received_message == "pose":
-            current_process = subprocess.Popen("sudo -E python3 pose2Display.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid)
+            current_process = subprocess.Popen("sudo -E python3 /home/pi/coms/pose2Display.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid)
         elif received_message == "disco":
-            current_process = subprocess.Popen("sudo -E python3 disco.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid)
+            current_process = subprocess.Popen("sudo -E python3 /home/pi/coms/disco.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid)
         elif received_message.startswith("gal_"):
             image_name = received_message.split('_')[1]
-            current_process = subprocess.Popen(f"sudo -E python3 saved.py {image_name}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid)
+            current_process = subprocess.Popen(f"sudo -E python3 /home/pi/coms/saved.py {image_name}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid)
         elif received_message == "kill":
             subprocess.Popen("sudo reboot", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             break
