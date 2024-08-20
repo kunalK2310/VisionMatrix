@@ -3,7 +3,8 @@ This folder contains the communication code used to facilitate TCP/IP socket com
 Additionally, this folder includes code for four different modes:
 
 1. Mirror Mode: Managed by "imageSegmentation.py"
-2. Stick Mode: Handled by pose2Display.py
-3. Disco Mode: Operated by disco.py
-4. Art Mode: Controlled by drawWithGesture.py
+2. Stick Mode: Handled by "pose2Display.py"
+3. Disco Mode: Operated by "disco.py"
+4. Art Mode: Controlled by "drawWithGesture.py"
+
 These files correspond to the various functionalities offered by our setup.
