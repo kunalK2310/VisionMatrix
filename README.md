@@ -1,3 +1,5 @@
+# VisionMatrix
+
 In this project, we developed Vision Matrix, an interactive art installation designed to engage users through dynamic visual representations. We utilized a combination of two Raspberry Pis, a PiTFT display, an LED matrix, and a camera to bring this concept to life. The installation captures the intersection of technology and art, transforming real-time video data into interactive displays on an LED matrix.
 The Vision Matrix operates through a dual-system setup. The primary Raspberry Pi processes video inputs to create real-time art manifestations such as silhouettes and gesture drawings, which are then displayed on the LED matrix. The secondary Raspberry Pi serves as an interactive control panel via the PiTFT display, allowing uses to select between three mode:
 Mirror Mode: Mirrors users' movements and gestures.
